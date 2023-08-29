@@ -1,11 +1,9 @@
-import React, { useEffect } from 'react'
-import Image from 'next/image'
-import userWheather from '../api/userWheather'
-import WeatherData from '../interfaces/weatherData'
-import Header from '../components/header'
-import RainIcon from '../../../public/images/rain-icon.png'
-import TodayCard from '../components/todayCard'
-import WeekCard from '../components/weekCard'
+import React, { useEffect } from 'react';
+import userWheather from '../app/api/userWheather';
+import WeatherData from '../app/interfaces/weatherData';
+import Header from '../app/components/header';
+import TodayCard from '../app/components/todayCard';
+import WeekCard from '../app/components/weekCard';
 
 const DAYS_OF_WEEK = 7;
 
@@ -58,4 +56,4 @@ const WeatherPage: React.FC = () => {
   )
 }
 
-export default WeatherPage
+export default WeatherPage;

@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 
 const Header: React.FC = () => {
@@ -5,9 +6,9 @@ const Header: React.FC = () => {
     <div className='fixed flex justify-between p-8 bg-cyan-500/25 w-screen'>
       <h1>NexClimate Portal</h1>
       <div className='w-1/5 flex justify-between'>
-        <a href="/">Clima</a>
-        <a href="/postalcode">Busca CEP</a>
-        <a href="/weather">Contato</a>
+        <Link href="/">Clima</Link>
+        <Link href="/postalCode">Busca CEP</Link>
+        <Link href="/contact">Contato</Link>
       </div>
     </div>
   )
