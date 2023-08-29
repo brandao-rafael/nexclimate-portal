@@ -1,11 +1,11 @@
 "use client";
 import React from "react";
-import ClimatePage from "./pages/climate.page";
+import WeatherPage from "./pages/weatherPage";
 
 const Home:React.FC = () => {
   return (
     <div>
-      <ClimatePage />
+      <WeatherPage />
     </div>
   )
 }
