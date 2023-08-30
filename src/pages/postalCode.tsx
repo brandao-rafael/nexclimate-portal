@@ -38,6 +38,7 @@ const PostalCode: React.FC = () => {
         setHasError(true)
         return
       }
+      setHasError(false)
       setAddress(result as PostalAddress)
     } catch (error) {
       setHasError(true)
