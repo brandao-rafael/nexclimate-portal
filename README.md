@@ -14,7 +14,7 @@ this application was developed as a test for a job opportunity.
 ## How to run
 - Clone this repository
 - Run `npm install`
-- Run `npm run start:dev`
+- Run `npm run dev`
 
 ## Deployed version
 - [NexClimate Portal](https://nexclimate-portal.vercel.app/)
