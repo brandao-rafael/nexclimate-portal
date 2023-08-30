@@ -48,11 +48,11 @@ const WeatherPage: React.FC = () => {
   return (
     <>
       <Header />
-      <div className="p-0 bg-cover h-screen" style={backgroundStyles}>
+      <div className="p-0 bg-cover h-full sm:h-screen" style={backgroundStyles}>
         {weatherData ? (
           <div className="flex flex-col sm:flex-row">
             <TodayCard weatherData={weatherData} />
-            <div className="flex flex-col sm:flex-row mt-10 sm:mt-0 justify-evenly sm:h-screen h-auto sm:w-full w-5/6 self-center">
+            <div className="flex flex-col sm:flex-row mt-10 mb-2 sm:mb-0 sm:mt-0 justify-evenly sm:h-screen h-auto sm:w-full w-5/6 self-center">
               {weatherData.forecast.map(
                 (item, i) =>
                   i < DAYS_OF_WEEK && <WeekCard key={item.date} item={item} />,

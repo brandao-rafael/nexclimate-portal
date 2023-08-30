@@ -7,7 +7,7 @@ const Header: React.FC = () => {
       <h1 className="text-white font-bold text-2xl self-center">
         NexClimate Portal
       </h1>
-      <div className="w-5/6 sm:w-1/3 flex mt-2 justify-between text-white">
+      <div className="w-5/6 sm:w-1/3 flex mt-2 justify-between self-center text-white">
         <Link className='font-bold hover:text-blue-300' href="/">Clima</Link>
         <Link className='font-bold hover:text-blue-300' href="/postalCode">Busca CEP</Link>
         <Link className='font-bold hover:text-blue-300' href="/contact">Contato</Link>
