@@ -17,7 +17,7 @@ const Contact: React.FC = () => {
     <div className="flex flex-col bg-cover h-screen w-full" style={backgroundStyles}>
       <Header />
       <div className='bg-black/25'>
-        <h1 className="text-white text-center font-bold text-5xl mb-8 mt-28">Contato</h1>
+        <h1 className="text-white text-center font-bold text-5xl mb-8 mt-36 sm:mt-28">Contato</h1>
         <ContactForm />
       </div>
     </div>
