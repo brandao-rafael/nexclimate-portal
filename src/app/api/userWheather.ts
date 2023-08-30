@@ -1,8 +1,8 @@
 import axios from 'axios'
 
-const apiKey = process.env.HG_API_KEY || 'dffe03f9'
+const apiKey = process.env.HG_API_KEY
 
-const userWheather: Function = async () => {
+const userWheather = async () => {
   return axios
     .get(`api/weather?key=${apiKey}&user_ip=remote`)
     .then((response) => response.data)

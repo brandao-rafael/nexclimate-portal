@@ -39,7 +39,8 @@ const TextInput: React.FC<TextInputProps> = ({
       <button
         type="button"
         className="m-2 rounded bg-sky-800 text-white font-bold px-4 py-2 disabled:opacity-50 disabled:cursor-not-allowed"
-        onClick={(_) => submit(value)}
+        // eslint-disable-next-line no-unused-vars
+        onClick={() => submit(value)}
         disabled={validation ? value.length !== validationLength : false}
       >
         {buttonText}
