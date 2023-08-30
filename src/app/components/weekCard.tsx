@@ -1,7 +1,7 @@
-import React from 'react';
-import ForecastData from '../interfaces/forecastData';
-import Image from 'next/image';
-import RainIcon from '../../../public/images/rain-icon.png';
+import React from 'react'
+import ForecastData from '../interfaces/forecastData'
+import Image from 'next/image'
+import RainIcon from '../../../public/images/rain-icon.png'
 
 interface ItemForecast {
   item: ForecastData
@@ -19,7 +19,7 @@ const WeekCard: React.FC<ItemForecast> = ({ item }) => {
         <h2 className="text-gray-700 text-lg">{item.rain_probability}%</h2>
       </div>
     </div>
-  );
+  )
 }
 
-export default WeekCard;
+export default WeekCard

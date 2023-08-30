@@ -1,6 +1,6 @@
-import React from 'react';
-import WeatherData from '../interfaces/weatherData';
-import TextInput from './textInput';
+import React from 'react'
+import WeatherData from '../interfaces/weatherData'
+import TextInput from './textInput'
 
 interface TodayCardProps {
   weatherData: WeatherData
@@ -19,7 +19,7 @@ const TodayCard: React.FC<TodayCardProps> = ({ weatherData }) => {
         <p className="text-gray-700">{weatherData.wind_speedy}</p>
       </div>
     </div>
-  );
+  )
 }
 
-export default TodayCard;
+export default TodayCard

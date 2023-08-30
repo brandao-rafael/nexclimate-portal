@@ -1,15 +1,17 @@
-import React, { useEffect } from 'react';
-import userWheather from '../app/api/userWheather';
-import WeatherData from '../app/interfaces/weatherData';
-import Header from '../app/components/header';
-import TodayCard from '../app/components/todayCard';
-import WeekCard from '../app/components/weekCard';
+import React, { useEffect } from 'react'
+import userWheather from '../app/api/userWheather'
+import WeatherData from '../app/interfaces/weatherData'
+import Header from '../app/components/header'
+import TodayCard from '../app/components/todayCard'
+import WeekCard from '../app/components/weekCard'
 
-const DAYS_OF_WEEK = 7;
+const DAYS_OF_WEEK = 7
 
 const WeatherPage: React.FC = () => {
   const [weatherData, setWeatherData] = React.useState<WeatherData | null>(null)
-  const [backgroundImage, setBackgroundImage] = React.useState<string>('images/clear-sky.jpg')
+  const [backgroundImage, setBackgroundImage] = React.useState<string>(
+    'images/clear-sky.jpg',
+  )
   const backgroundStyles = {
     backgroundImage: `url(${backgroundImage})`,
     backgroundSize: 'cover',
@@ -23,12 +25,11 @@ const WeatherPage: React.FC = () => {
     const fetchWeatherData = async () => {
       try {
         const data = await userWheather()
-        console.log(data.results)
         if (data.results.condition_slug.includes('cloud')) {
           setBackgroundImage('images/rain-clouds.jpg')
         } else if (data.results.condition_slug.includes('storm')) {
           setBackgroundImage('images/storm.jpg')
-        } else  {
+        } else {
           setBackgroundImage('images/clear-sky.jpg')
         }
         setWeatherData(data.results)
@@ -47,9 +48,10 @@ const WeatherPage: React.FC = () => {
           <div className="flex flex-col sm:flex-row">
             <TodayCard weatherData={weatherData} />
             <div className="flex flex-col sm:flex-row mt-10 sm:mt-0 justify-evenly sm:h-screen h-auto sm:w-full w-5/6 self-center">
-              {weatherData.forecast.map((item, i) => i < DAYS_OF_WEEK && (
-                <WeekCard key={item.date} item={item} />
-              ))}
+              {weatherData.forecast.map(
+                (item, i) =>
+                  i < DAYS_OF_WEEK && <WeekCard key={item.date} item={item} />,
+              )}
             </div>
           </div>
         ) : (
@@ -64,4 +66,4 @@ const WeatherPage: React.FC = () => {
   )
 }
 
-export default WeatherPage;
+export default WeatherPage

@@ -3,7 +3,7 @@ import { PostalAddress } from '../interfaces/postalInterfaces'
 
 const CepResultContainer: React.FC<PostalAddress> = (data) => {
   return (
-    <div className='mt-8 w-full md:w-1/2'>
+    <div className="mt-8 w-full md:w-1/2">
       <h1 className="text-white text-center font-bold">Resultados:</h1>
       <div className="bg-white rounded-md w-1/2 p-8 ml-auto mr-auto shadow-2xl">
         <ul>

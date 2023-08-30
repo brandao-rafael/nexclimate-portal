@@ -77,7 +77,7 @@ const ContactForm: React.FC = () => {
         <input
           type="submit"
           value="Enviar"
-          className="p-2 w-4/5 bg-sky-800 text-white rounded-md font-bold sm:w-1/3"
+          className="p-2 w-4/5 sm:w-1/3 bg-sky-800 text-white rounded-md font-bold "
         />
       </form>
     </div>

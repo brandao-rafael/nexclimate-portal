@@ -6,7 +6,7 @@ interface TextInputProps {
   type?: string
   buttonText?: string
   validation?: boolean
-    validationLength?: number
+  validationLength?: number
 }
 
 const TextInput: React.FC<TextInputProps> = ({

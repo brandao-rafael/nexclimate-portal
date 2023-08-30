@@ -6,7 +6,6 @@ import React, { useState } from 'react'
 import { PostalAddress } from '@/app/interfaces/postalInterfaces'
 import CepResultContainer from '@/app/components/cepResultContainer'
 
-
 const PostalCode: React.FC = () => {
   const backgroundStyles = {
     backgroundImage: 'url(images/map.jpg)',
@@ -28,7 +27,7 @@ const PostalCode: React.FC = () => {
     gia: '',
     ddd: '',
     siafi: '',
-  } as PostalAddress);
+  } as PostalAddress)
 
   const [hasError, setHasError] = useState(false)
 
@@ -46,10 +45,15 @@ const PostalCode: React.FC = () => {
   }
 
   return (
-    <div className="flex flex-col justify-center items-center bg-cover h-screen w-full" style={backgroundStyles}>
+    <div
+      className="flex flex-col justify-center items-center bg-cover h-screen w-full"
+      style={backgroundStyles}
+    >
       <Header />
-      <div className='mt-28 bg-black/25 p-4 rounded'>
-        <h1 className="text-white text-center font-bold text-5xl mb-12 ">Busca de CEP</h1>
+      <div className="mt-28 bg-black/25 p-4 rounded">
+        <h1 className="text-white text-center font-bold text-5xl mb-12 ">
+          Busca de CEP
+        </h1>
         <TextInput
           submit={searchPostalCode}
           placeholder="Informe o CEP"
@@ -61,11 +65,7 @@ const PostalCode: React.FC = () => {
           CEP não encontrado
         </div>
       )}
-      {
-        address.cep != '' && (
-          <CepResultContainer {...address} />
-        )
-      }
+      {address.cep != '' && <CepResultContainer {...address} />}
     </div>
   )
 }
