@@ -22,7 +22,6 @@ const WeatherPage: React.FC = () => {
     const fetchWeatherData = async () => {
       try {
         const data = await userWheather()
-        console.log(data)
         setWeatherData(data.results)
       } catch (error) {
         console.error('Error fetching weather data', error)
