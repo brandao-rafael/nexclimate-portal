@@ -1,5 +1,6 @@
 import React from 'react';
 import WeatherData from '../interfaces/weatherData';
+import TextInput from './textInput';
 
 interface TodayCardProps {
   weatherData: WeatherData
@@ -7,7 +8,7 @@ interface TodayCardProps {
 
 const TodayCard: React.FC<TodayCardProps> = ({ weatherData }) => {
   return (
-    <div className="flex justify-center items-center h-screen w-1/3">
+    <div className="flex flex-col justify-center items-center h-screen w-1/3">
       <div className="bg-white/25 rounded-lg shadow-lg p-8">
         <h1 className="text-black text-3xl font-light">{weatherData.city}</h1>
         <h2 className="text-gray-900 text-3xl font-light">

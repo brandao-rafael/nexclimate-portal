@@ -48,8 +48,8 @@ const PostalCode: React.FC = () => {
   return (
     <div className="flex flex-col justify-center items-center bg-cover h-screen w-full" style={backgroundStyles}>
       <Header />
-      <div className='mt-28'>
-        <h1 className="text-white text-center font-bold text-5xl mb-12">Busca de CEP</h1>
+      <div className='mt-28 bg-black/25 p-4 rounded'>
+        <h1 className="text-white text-center font-bold text-5xl mb-12 ">Busca de CEP</h1>
         <TextInput
           submit={searchPostalCode}
           placeholder="Informe o CEP"

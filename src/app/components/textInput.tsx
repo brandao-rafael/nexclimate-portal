@@ -19,19 +19,26 @@ const TextInput: React.FC<TextInputProps> = ({
 }) => {
   const [value, setValue] = React.useState('')
 
+  const handleKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    if (event.key === 'Enter') {
+      submit(value)
+    }
+  }
+
   return (
     <div className="flex">
       <input
         type={type}
         placeholder={placeholder}
-        className="border-2 border-gray-300 rounded-lg p-1 m-2 text-black"
+        className="border-2 border-gray-300 rounded p-1 m-2 text-black"
+        onKeyDown={handleKeyPress}
         onChange={({ target: { value } }) => {
           setValue(value)
         }}
       />
       <button
         type="button"
-        className="m-2 rounded-lg bg-white text-black pl-1 pr-1 disabled:opacity-50 disabled:cursor-not-allowed"
+        className="m-2 rounded bg-sky-800 text-white font-bold px-4 py-2 disabled:opacity-50 disabled:cursor-not-allowed"
         onClick={(_) => submit(value)}
         disabled={validation ? value.length !== validationLength : false}
       >

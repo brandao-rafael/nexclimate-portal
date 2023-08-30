@@ -16,8 +16,10 @@ const Contact: React.FC = () => {
   return (
     <div className="flex flex-col bg-cover h-screen w-full" style={backgroundStyles}>
       <Header />
-      <h1 className="text-white text-center font-bold text-5xl mb-8 mt-28">Contato</h1>
-      <ContactForm />
+      <div className='bg-black/25'>
+        <h1 className="text-white text-center font-bold text-5xl mb-8 mt-28">Contato</h1>
+        <ContactForm />
+      </div>
     </div>
   )
 }

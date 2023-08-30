@@ -29,13 +29,13 @@ const ContactForm: React.FC = () => {
   }
 
   return (
-    <div className="bg-black/25 p-5">
+    <div className="p-5">
       <form className="flex flex-col items-center" onSubmit={submit}>
         <label className="font-bold text-white" htmlFor="userName">
           Nome:
         </label>
         <input
-          className="border-2 border-gray-300 rounded-lg p-1 m-2 text-black bg-white"
+          className="border-2 border-gray-300 rounded-lg p-1 m-2 w-4/5 text-black bg-white sm:w-1/3"
           type="text"
           id="userName"
           name="name"
@@ -46,7 +46,7 @@ const ContactForm: React.FC = () => {
           Email:
         </label>
         <input
-          className="border-2 border-gray-300 rounded-lg p-1 m-2 text-black bg-white"
+          className="border-2 border-gray-300 rounded-lg p-1 m-2 w-4/5 text-black bg-white sm:w-1/3"
           type="text"
           id="userEmail"
           name="email"
@@ -57,7 +57,7 @@ const ContactForm: React.FC = () => {
           Mensagem:
         </label>
         <textarea
-          className="border-2 border-gray-300 rounded-lg p-1 m-2 text-black bg-white"
+          className="border-2 border-gray-300 rounded-lg p-1 m-2 w-4/5 text-black bg-white sm:w-1/3"
           id="userMessage"
           name="message"
           value={userData.message}
@@ -67,7 +67,7 @@ const ContactForm: React.FC = () => {
           Envie seu currículo: (apenas PDF)
         </label>
         <input
-          className="p-1 bg-white rounded-sm font-bold m-4 border-2 border-gray-300"
+          className="p-1 bg-white rounded font-bold m-4 border-2 border-gray-300 w-4/5 sm:w-1/3"
           type="file"
           accept=".pdf"
           name="file"
@@ -77,7 +77,7 @@ const ContactForm: React.FC = () => {
         <input
           type="submit"
           value="Enviar"
-          className="p-2 w-1/4 bg-white rounded-md font-bold "
+          className="p-2 w-4/5 bg-sky-800 text-white rounded-md font-bold sm:w-1/3"
         />
       </form>
     </div>
