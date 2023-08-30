@@ -4,7 +4,6 @@ import WeatherData from '../app/interfaces/weatherData'
 import Header from '../app/components/header'
 import TodayCard from '../app/components/todayCard'
 import WeekCard from '../app/components/weekCard'
-import { set } from 'zod'
 
 const DAYS_OF_WEEK = 7
 
