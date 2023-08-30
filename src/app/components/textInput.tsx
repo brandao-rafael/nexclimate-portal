@@ -5,6 +5,7 @@ interface TextInputProps {
   placeholder?: string
   type?: string
   buttonText?: string
+  validation?: boolean
 }
 
 const TextInput: React.FC<TextInputProps> = ({
@@ -12,6 +13,7 @@ const TextInput: React.FC<TextInputProps> = ({
   placeholder = '',
   type = 'text',
   buttonText = 'Search',
+  validation = false,
 }) => {
   const [value, setValue] = React.useState('')
 
@@ -25,7 +27,12 @@ const TextInput: React.FC<TextInputProps> = ({
           setValue(value)
         }}
       />
-      <button type="button" className="m-2 rounded-lg bg-white text-black pl-1 pr-1" onClick={(_) => submit(value)}>
+      <button
+        type="button"
+        className="m-2 rounded-lg bg-white text-black pl-1 pr-1"
+        onClick={(_) => submit(value)}
+        disabled={validation ? value.length !== 8 : false}
+      >
         {buttonText}
       </button>
     </div>
