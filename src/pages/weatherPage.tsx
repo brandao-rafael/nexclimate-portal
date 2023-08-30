@@ -9,8 +9,9 @@ const DAYS_OF_WEEK = 7;
 
 const WeatherPage: React.FC = () => {
   const [weatherData, setWeatherData] = React.useState<WeatherData | null>(null)
+  const [backgroundImage, setBackgroundImage] = React.useState<string>('images/clear-sky.jpg')
   const backgroundStyles = {
-    backgroundImage: 'url(images/rain-clouds.jpg)',
+    backgroundImage: `url(${backgroundImage})`,
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
@@ -22,6 +23,14 @@ const WeatherPage: React.FC = () => {
     const fetchWeatherData = async () => {
       try {
         const data = await userWheather()
+        console.log(data.results)
+        if (data.results.condition_slug.includes('cloud')) {
+          setBackgroundImage('images/rain-clouds.jpg')
+        } else if (data.results.condition_slug.includes('storm')) {
+          setBackgroundImage('images/storm.jpg')
+        } else  {
+          setBackgroundImage('images/clear-sky.jpg')
+        }
         setWeatherData(data.results)
       } catch (error) {
         console.error('Error fetching weather data', error)
