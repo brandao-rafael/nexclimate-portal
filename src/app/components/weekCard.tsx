@@ -9,7 +9,7 @@ interface ItemForecast {
 
 const WeekCard: React.FC<ItemForecast> = ({ item }) => {
   return (
-    <div className="flex flex-col justify-between text-center bg-white/25 rounded-lg shadow-lg p-2 h-1/4 mt-auto mb-auto">
+    <div className="flex flex-row sm:flex-col justify-between text-center bg-white/25 rounded-lg shadow-lg p-2 h-1/4 mt-auto mb-auto">
       <h1 className="text-black text-2xl font-light">{item.weekday}</h1>
       <p className="text-gray-600 font-light text-sm">{item.date}</p>
       <p className="text-gray-900 font-light text-sm">Max: {item.max}°C</p>
