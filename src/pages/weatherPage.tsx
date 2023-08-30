@@ -13,7 +13,6 @@ const WeatherPage: React.FC = () => {
     'images/clear-sky.jpg',
   )
 
-
   const backgroundStyles = {
     backgroundImage: `url(${backgroundImage})`,
     backgroundSize: 'cover',
