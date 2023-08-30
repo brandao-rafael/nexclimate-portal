@@ -1,6 +1,5 @@
 import React from 'react'
 import WeatherData from '../interfaces/weatherData'
-import TextInput from './textInput'
 
 interface TodayCardProps {
   weatherData: WeatherData
