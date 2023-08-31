@@ -39,7 +39,7 @@ const ContactForm: React.FC = () => {
   }
 
   return (
-    <div className="p-1">
+    <div>
       <form className="flex flex-col items-center" onSubmit={submit}>
         <label className="font-light text-white" htmlFor="userName">
           Nome:
@@ -77,7 +77,7 @@ const ContactForm: React.FC = () => {
           Envie seu currículo: (apenas PDF)
         </label>
         <input
-          className="p-1 bg-white/50 rounded font-light m-4 border-2 border-gray-300 w-4/5 sm:w-7/12"
+          className="p-1 bg-white/5 text-white rounded font-light m-4 border-2 border-gray-300 w-4/5 sm:w-7/12"
           type="file"
           accept=".pdf"
           name="file"
