@@ -16,7 +16,7 @@ This [branch](https://github.com/brandao-rafael/nexclimate-portal/tree/brandao-r
 ## How to run
 - Clone this repository
 - Run `npm install`
-- Run `npm run start:dev`
+- Run `npm run dev`
 
 ## Deployed version
 - [NexClimate Portal](https://nexclimate-portal.vercel.app/)
