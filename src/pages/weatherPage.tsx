@@ -22,6 +22,24 @@ const WeatherPage: React.FC = () => {
     padding: '0',
   }
 
+  const getWeatheIcon = (condition: string) => {
+    switch (condition) {
+      case 'tempo limpo':
+        return '/icons/sun.png'
+      case 'tempo nublado':
+        console.log('nublado')
+        return '/icons/cloud.png'
+      case 'chuva':
+        return '/icons/rain.png'
+      case 'chuvas esparsas':
+        return '/icons/drizzle.png'
+      case 'tempestade':
+        return '/icons/storm.png'
+      default:
+        return '/icons/sun_cloud.png'
+    }
+  }
+
   useEffect(() => {
     const fetchWeatherData = async () => {
       try {
@@ -51,7 +69,7 @@ const WeatherPage: React.FC = () => {
       <div className="p-0 bg-cover h-full sm:h-screen" style={backgroundStyles}>
         {weatherData ? (
           <div className="flex flex-col sm:flex-row">
-            <TodayCard weatherData={weatherData} />
+            <TodayCard weatherData={weatherData} weatherIconPath={getWeatheIcon(weatherData.description.toLowerCase())}/>
             <div className="flex flex-col sm:flex-row mt-10 mb-2 sm:mb-0 sm:mt-0 justify-evenly sm:h-screen h-auto sm:w-full w-5/6 self-center">
               {weatherData.forecast.map(
                 (item, i) =>
