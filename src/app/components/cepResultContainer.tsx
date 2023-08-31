@@ -4,7 +4,7 @@ import { PostalAddress } from '../interfaces/postalInterfaces'
 const CepResultContainer: React.FC<PostalAddress> = (data) => {
   return (
     <div className="mt-8 w-full">
-      <h1 className="text-white text-center font-bold">Resultados:</h1>
+      <h2 className="text-white text-center font-thin">Resultados:</h2>
       <div className="bg-white rounded-md w-11/12 px-8 py-3 ml-auto mr-auto shadow-2xl shadow-white/25">
         <ul>
           {Object.entries(data).map((data) => {

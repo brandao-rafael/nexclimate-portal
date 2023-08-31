@@ -52,7 +52,7 @@ const PostalCode: React.FC = () => {
     >
       <Header />
       <div className="mt-28 bg-black/25 p-4 rounded shadow-2xl shadow-slate-300/25">
-        <h1 className="text-white text-center font-bold text-5xl mb-12 ">
+        <h1 className="text-white text-center font-thin text-5xl mb-8 ">
           Busca de CEP
         </h1>
         <TextInput
