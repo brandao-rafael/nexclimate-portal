@@ -27,7 +27,7 @@ const WeatherPage: React.FC = () => {
   const searchByCityName = async (cityName: string) => {
     try {
       const data = await searchByCity(cityName)
-      if (data.results.condition_slug.includes('cloud')) {
+      if (data.results.condition_slug.includes('cloud') || data.results.condition_slug.includes('rain')) {
         setBackgroundImage('images/rain-clouds.jpg')
       } else if (data.results.condition_slug.includes('storm')) {
         setBackgroundImage('images/storm.jpg')
