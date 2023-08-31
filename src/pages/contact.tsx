@@ -20,10 +20,12 @@ const Contact: React.FC = () => {
     >
       <Header />
       <div className="bg-black/50 h-full">
-        <h1 className="text-white text-center font-thin text-5xl mb-8 mt-36 sm:mt-28">
-          Contato
-        </h1>
-        <ContactForm />
+        <div className='w-4/6 ml-auto mr-auto mt-36 sm:mt-28 bg-black/25 rounded-md p-5'>
+          <h1 className="text-white text-center font-thin text-5xl mb-8">
+            Contato
+          </h1>
+          <ContactForm />
+        </div>
       </div>
     </div>
   )
