@@ -19,8 +19,8 @@ const Contact: React.FC = () => {
       style={backgroundStyles}
     >
       <Header />
-      <div className="bg-black/25">
-        <h1 className="text-white text-center font-bold text-5xl mb-8 mt-36 sm:mt-28">
+      <div className="bg-black/50 h-full">
+        <h1 className="text-white text-center font-thin text-5xl mb-8 mt-36 sm:mt-28">
           Contato
         </h1>
         <ContactForm />

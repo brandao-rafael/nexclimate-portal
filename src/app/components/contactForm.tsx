@@ -41,7 +41,7 @@ const ContactForm: React.FC = () => {
   return (
     <div className="p-5">
       <form className="flex flex-col items-center" onSubmit={submit}>
-        <label className="font-bold text-white" htmlFor="userName">
+        <label className="font-light text-white" htmlFor="userName">
           Nome:
         </label>
         <input
@@ -52,7 +52,7 @@ const ContactForm: React.FC = () => {
           value={userData.name}
           onChange={handleChange}
         />
-        <label className="font-bold text-white" htmlFor="userEmail">
+        <label className="font-light text-white" htmlFor="userEmail">
           Email:
         </label>
         <input
@@ -63,7 +63,7 @@ const ContactForm: React.FC = () => {
           value={userData.email}
           onChange={handleChange}
         />
-        <label className="font-bold text-white" htmlFor="userMessage">
+        <label className="font-light text-white" htmlFor="userMessage">
           Mensagem:
         </label>
         <textarea
@@ -73,11 +73,11 @@ const ContactForm: React.FC = () => {
           value={userData.message}
           onChange={handleChange}
         />
-        <label className="font-bold text-white" htmlFor="file">
+        <label className="font-light text-white" htmlFor="file">
           Envie seu currículo: (apenas PDF)
         </label>
         <input
-          className="p-1 bg-white/50 rounded font-bold m-4 border-2 border-gray-300 w-4/5 sm:w-1/3"
+          className="p-1 bg-white/50 rounded font-light m-4 border-2 border-gray-300 w-4/5 sm:w-1/3"
           type="file"
           accept=".pdf"
           name="file"
