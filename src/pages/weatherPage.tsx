@@ -53,7 +53,7 @@ const WeatherPage: React.FC = () => {
         {weatherData ? (
           <div className="flex flex-col sm:flex-row">
             <TodayCard weatherData={weatherData} weatherIconPath={getWeatherIcon(parseInt(weatherData.condition_code))}/>
-            <div className="flex flex-col sm:flex-row mt-10 mb-2 sm:mb-0 sm:mt-0 justify-evenly sm:h-screen h-auto sm:w-full w-5/6 self-center">
+            <div className="flex flex-col sm:flex-row mt-10 mb-2 sm:mb-0 sm:mt-0 justify-evenly sm:h-screen h-auto sm:w-full w-11/12 self-center">
               {weatherData.forecast.map(
                 (item, i) =>
                   i < DAYS_OF_WEEK && <WeekCard key={item.date} item={item} weatherIconPath={getWeatherIconBySlug(item.condition)} />,
