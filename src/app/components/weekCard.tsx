@@ -5,12 +5,19 @@ import RainIcon from '../../../public/images/rain-icon.png'
 
 interface ItemForecast {
   item: ForecastData
+  weatherIconPath: string
 }
 
-const WeekCard: React.FC<ItemForecast> = ({ item }) => {
+const WeekCard: React.FC<ItemForecast> = ({ item, weatherIconPath }) => {
   return (
     <div className="flex flex-row sm:flex-col justify-between text-center bg-white/25 rounded-lg shadow-lg p-2 h-1/4 mt-auto mb-1 sm:mb-auto">
       <h1 className="text-black text-2xl font-light">{item.weekday}</h1>
+      <Image
+        src={weatherIconPath}
+        width={64}
+        height={64}
+        alt="weather icon"
+      />
       <p className="text-gray-600 font-light text-sm">{item.date}</p>
       <p className="text-gray-900 font-light text-sm">Max: {item.max}°C</p>
       <p className="text-gray-900 font-light text-sm">Min: {item.min}°C</p>
