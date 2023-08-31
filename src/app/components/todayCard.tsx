@@ -8,10 +8,8 @@ interface TodayCardProps {
 }
 
 const TodayCard: React.FC<TodayCardProps> = ({ weatherData, weatherIconPath }) => {
-  console.log(weatherData)
-
   return (
-    <div className="flex flex-col self-center sm:self-start mt-40 sm:m-0 justify-center items-center h-auto sm:h-screen sm:w-1/3 w-full">
+    <div className="flex flex-col self-center sm:self-start mt-5 sm:m-0 justify-center items-center h-auto sm:w-1/3 w-full">
       <div className="bg-black/25 rounded-lg shadow-lg p-8">
         <h1 className="text-white text-3xl font-light">{weatherData.city}</h1>
         <div className='flex'>

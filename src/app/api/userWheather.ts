@@ -9,4 +9,11 @@ const userWheather = async () => {
     .catch((error) => console.log(error))
 }
 
-export default userWheather
+const searchByCity = async (city: string) => {
+  return axios
+    .get(`https://api.hgbrasil.com/weather?format=json-cors&key=${apiKey}&city_name=${city}`)
+    .then((response) => response.data)
+    .catch((error) => console.log(error))
+}
+
+export { userWheather, searchByCity }

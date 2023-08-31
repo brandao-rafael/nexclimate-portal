@@ -26,6 +26,8 @@ const WeekCard: React.FC<ItemForecast> = ({ item, weatherIconPath }) => {
       mb-1
       sm:mb-auto
       xl:p-8
+      w-full
+      sm:w-auto
       "
     >
       <h1 className="text-white text-2xl font-light">{item.weekday}</h1>
