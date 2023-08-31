@@ -28,6 +28,16 @@ const ContactForm: React.FC = () => {
     console.log({ ...userData, file })
   }
 
+  const validateForm = () => {
+    const emailRegex = /\S+@\S+\.\S+/
+    return (
+      userData.name.trim().length < 5 ||
+      !emailRegex.test(userData.email) ||
+      userData.message.trim().length < 5 ||
+      !file
+    )
+  }
+
   return (
     <div className="p-5">
       <form className="flex flex-col items-center" onSubmit={submit}>
@@ -67,7 +77,7 @@ const ContactForm: React.FC = () => {
           Envie seu currículo: (apenas PDF)
         </label>
         <input
-          className="p-1 bg-white rounded font-bold m-4 border-2 border-gray-300 w-4/5 sm:w-1/3"
+          className="p-1 bg-white/50 rounded font-bold m-4 border-2 border-gray-300 w-4/5 sm:w-1/3"
           type="file"
           accept=".pdf"
           name="file"
@@ -77,7 +87,8 @@ const ContactForm: React.FC = () => {
         <input
           type="submit"
           value="Enviar"
-          className="p-2 w-4/5 sm:w-1/3 bg-sky-800 text-white rounded-md font-bold "
+          className="p-2 w-4/5 sm:w-1/3 bg-sky-800 text-white rounded-md font-thin hover:font-bold hover:animate-pulse transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+          disabled={validateForm()}
         />
       </form>
     </div>
