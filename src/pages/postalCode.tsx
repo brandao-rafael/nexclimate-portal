@@ -38,6 +38,7 @@ const PostalCode: React.FC = () => {
         setHasError(true)
         return
       }
+      setHasError(false)
       setAddress(result as PostalAddress)
     } catch (error) {
       setHasError(true)
@@ -50,22 +51,23 @@ const PostalCode: React.FC = () => {
       style={backgroundStyles}
     >
       <Header />
-      <div className="mt-28 bg-black/25 p-4 rounded">
-        <h1 className="text-white text-center font-bold text-5xl mb-12 ">
+      <div className="mt-28 bg-black/25 p-6 rounded-md">
+        <h1 className="text-white text-center font-thin text-5xl mb-8">
           Busca de CEP
         </h1>
         <TextInput
           submit={searchPostalCode}
           placeholder="Informe o CEP"
           validation={true}
+          type='number'
         />
+      {address.cep != '' && <CepResultContainer {...address} />}
       </div>
       {hasError && (
         <div className="text-black bg-white rounded-md p-6 text-center font-bold text-3xl mt-12">
           CEP não encontrado
         </div>
       )}
-      {address.cep != '' && <CepResultContainer {...address} />}
     </div>
   )
 }

@@ -6,6 +6,8 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --background-start-hex: #5662ba
+  --background-end-hex: #55d3aa
 }
 
 @media (prefers-color-scheme: dark) {

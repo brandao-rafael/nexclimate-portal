@@ -19,11 +19,13 @@ const Contact: React.FC = () => {
       style={backgroundStyles}
     >
       <Header />
-      <div className="bg-black/25">
-        <h1 className="text-white text-center font-bold text-5xl mb-8 mt-36 sm:mt-28">
-          Contato
-        </h1>
-        <ContactForm />
+      <div className="bg-black/50 h-full">
+        <div className='w-4/6 ml-auto mr-auto mt-28 2xl:mt-36 bg-black/25 rounded-md p-5'>
+          <h1 className="text-white text-center font-thin text-5xl mb-8">
+            Contato
+          </h1>
+          <ContactForm />
+        </div>
       </div>
     </div>
   )
